@@ -4,7 +4,7 @@ This project was built to play in just 8 hours. Using functional programming ski
 
 ## Getting Started
 
-You can take a look here: .
+You can take a look here: [click here](https://castilloluis.github.io/calories-calculator/) .
 
 ## Built With
 
