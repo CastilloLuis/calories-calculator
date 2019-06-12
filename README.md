@@ -1,13 +1,17 @@
-### Simple "Calories Calculator"
-____
-ABOUT:
-> This project was built to play in just 8 hours.
-> Using functional programming skills (closures, currying, functions composition
+# Simple "Calories Calculator"
 
-### Programming languages
-____
-##### FRONTEND: JavaScript, HTML5, BOOTSTRAP.
+This project was built to play in just 8 hours. Using functional programming skills (closures, currying, functions composition...).
 
-### Developers
-____
-#### FRONT-END: [Luis E. Castillo G.](http://github.com/CastilloLuis)
+## Getting Started
+
+You can take a look here: .
+
+## Built With
+
+* [JavaScript]() - FrontEnd Programming Language
+* [HTML5]() - Markup language
+* [BootStrap]() - CSS Framework
+
+## Authors
+
+* **Luis Castillo** - *Initial work* - [CastleDev](https://github.com/CastilloLuis)

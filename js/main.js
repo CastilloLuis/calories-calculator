@@ -1,6 +1,12 @@
 const compose = (...functions) => data =>
   functions.reduceRight((value, func) => func(value), data)
 
+/**
+ * Find element in DOM by id and returns it
+ * @param {*} id 
+ */
+const $ = id => document.getElementById(id);
+
 let formInputs = {
   description: $('description'),
   calories: $('calories'),
@@ -11,12 +17,6 @@ let formInputs = {
 let list = [];
 
 const inputEntries = Object.entries(formInputs);
-
-/**
- * Find element in DOM by id and returns it
- * @param {*} id 
- */
-const $ = id => document.getElementById(id);
 
 /**
  * Declarative function that generate props for html tags
