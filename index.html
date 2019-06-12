@@ -45,19 +45,19 @@
           <div class="card-footer">
             <div class="row mb-2">
               <div class="col">
-                  <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Description">
+                  <input type="text" id="description" class="form-control mb-2 mr-sm-2" placeholder="Description">
               </div>
               <div class="col">
-                  <input type="number" min="0" class="form-control mb-2 mr-sm-2" placeholder="Calories">
+                  <input type="number" id="calories" min="0" class="form-control mb-2 mr-sm-2" placeholder="Calories">
               </div>
               <div class="col">
-                  <input type="number" min="0" class="form-control mb-2 mr-sm-2" placeholder="Carbs">
+                  <input type="number" id="carbs" min="0" class="form-control mb-2 mr-sm-2" placeholder="Carbs">
               </div>
               <div class="col">
-                  <input type="number" min="0" class="form-control mb-2 mr-sm-2" placeholder="Protein">
+                  <input type="number" id="protein" min="0" class="form-control mb-2 mr-sm-2" placeholder="Protein">
               </div>
               <div class="col">
-                  <button class="btn btn-primary mb-2">
+                  <button class="btn btn-primary mb-2" onclick="validateInputs()">
                     <i class="fas fa-plus"></i>
                   </button>
               </div>
