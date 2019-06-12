@@ -14,6 +14,23 @@ let list = [];
 
 const inputEntries = Object.entries(formInputs);
 
+const attrsToString = (obj = {}) => {
+  const keys = Object.keys(obj);
+  const attrs = (keys.map(key => `${key}="${obj[key]}"`)).join(' ');
+  return attrs;
+}
+
+const tagAttrs = obj => (content = '') => 
+`<${obj.tag} ${obj.attrs ? ' ' : ''}${attrsToString(obj.attrs)}>${content}</${obj.tag}>`
+
+const tag = t => {
+  if(typeof t === 'string') {
+    tagAttrs({tag: t})
+  } else {
+    tagAttrs(t);
+  }
+}
+
 const validateInputs = () => {
   inputEntries.forEach(prop => {
     if (!prop[1].value) {
@@ -24,7 +41,8 @@ const validateInputs = () => {
   });
 
   if(Object.values(formInputs).every(({ value }) => value)) {
-    alert('All inputs are fill')
+    addToList();
+    clearForm();
   }
 }
 
@@ -38,5 +56,17 @@ const removeInvalidType = () => {
   })
 }
 
-removeInvalidType();
+const addToList = () => {
+  const { description, calories, carbs, protein } = formInputs;
+  const newItem = {
+    description: description.value,
+    calories: +calories.value,
+    carbs: +carbs.value,
+    protein: +protein.value
+  }
+  list.push(newItem);
+}
 
+const clearForm = () => Object.values(formInputs).forEach(element => element.value = '');
+
+removeInvalidType();
